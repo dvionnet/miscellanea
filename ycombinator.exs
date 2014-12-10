@@ -14,7 +14,7 @@
 y = fn f -> (&(&1.(&1))).(&(f.(fn a -> (&1.(&1)).(a) end))) end
 
 # Let's take 2 examples, the factorial and the fibonacci functions
-fac = &(fn 0 -> 0; 1->1; n -> n*&1.(n-1) end)
+fac = &(fn 0 -> 0; 1 -> 1; n -> n*&1.(n-1) end)
 fib = &(fn 0 -> 0; 1 -> 1; n -> &1.(n-1) + &1.(n-2) end)
 
 IO.puts "fac(100) = #{(y.(fac)).(100)}"
