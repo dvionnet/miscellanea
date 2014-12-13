@@ -1,6 +1,7 @@
 /*
-This is a very handy utility to send commands to an other tty.
-found here: http://www.humbug.in/2010/utility-to-send-commands-or-data-to-other-terminals-ttypts/
+This is a very handy utility to send commands to another tty.
+I have not written this code, I just found it here:
+http://www.humbug.in/2010/utility-to-send-commands-or-data-to-other-terminals-ttypts/
 
 I was looking for some way to emulate the workflow of emacs in
 vim (sending region or buffer to the REPL...) and this piece of code, a
@@ -13,9 +14,9 @@ tiling window manager and two xterm windows almost do the trick.
 # mv ttyecho /usr/local/sbin
 
 -- usage --
-- get the name of the terminal you want to send command to with `tty`
+get the name of the terminal you want to send command to with `tty`
 % ttyecho -n /dev/pts/1 <cmd>
-- send a command to tty1 from vim:
+send a command to tty1 from vim:
 :command! -nargs=* A :silent !ttyecho -n /dev/pts/1 "<args>"
 :A <cmd>
 */
